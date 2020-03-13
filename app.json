@@ -32,9 +32,23 @@
         "UIBackgroundModes": [
           "location"
         ]
-      }
+      },
+      "bundleIdentifier": "coepi.org",
+      "publishBundlePath": "ios/coepi-mvp/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/coepi-mvp/Supporting/shell-app-manifest.json"
     },
     "description": "Barebones MVP for Co-Epi. ",
-    "githubUrl": "https://github.com/Co-Epi/mvp"
+    "githubUrl": "https://github.com/Co-Epi/mvp",
+    "isDetached": true,
+    "detach": {
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.14.6-sdk36.0.0-8ea388d1-463b-4e91-bbf7-2d95d0174c96.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.14.2-sdk36.0.0-ce7e16db-fd5d-4fdd-bdeb-701ba94a04d1.tar.gz"
+    },
+    "scheme": "exp6482cc020f644bd3a58d099ba1857d49",
+    "android": {
+      "package": "coepi.org",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
+    }
   }
 }

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>CoEpi MVP</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>coepi.org</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>CoEpi MVP</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>exp6482cc020f644bd3a58d099ba1857d49</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>OAuthRedirect</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>coepi.org</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>81130e95ea13cd7ed9a4f455e96214902c721c99</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Allow CoEpi MVP to access your calendar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow CoEpi MVP to use your camera</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Allow CoEpi MVP to access your contacts</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>When you change locations, we'll remind you to wash your hands.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>When you change locations, we'll remind you to wash your hands.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>When you change locations, we'll remind you to wash your hands.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Allow CoEpi MVP to access your microphone</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Allow CoEpi MVP to access your device's accelerometer</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Give CoEpi MVP permission to save photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Give CoEpi MVP permission to access your photos</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Allow CoEpi MVP to access your reminders</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array/>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>
