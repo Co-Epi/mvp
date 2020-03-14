@@ -3,6 +3,8 @@ import {View, Text, StyleSheet, FlatList} from 'react-native';
 import {NativeModules} from 'react-native';
 import {DeviceEventEmitter, NativeEventEmitter} from 'react-native';
 const { Bridge } = NativeModules;
+import { Container } from 'native-base'
+import { Header } from '../components/ui'
 
 class BLE extends Component {
   constructor() {
