@@ -19,6 +19,10 @@
 		B5DB04801F3A684600E91581 /* shell-app-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047E1F3A684600E91581 /* shell-app-manifest.json */; };
 		B5DB04811F3A684600E91581 /* shell-app.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047F1F3A684600E91581 /* shell-app.bundle */; };
 		EBB8117C1BFA0514F79CAF74 /* libPods-coepi-mvp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A88D15726AD99E8A257BC7 /* libPods-coepi-mvp.a */; };
+		F9840F45241CA51300BEEC14 /* BLEDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9840F44241CA51300BEEC14 /* BLEDiscovery.swift */; };
+		F9840F47241CA53000BEEC14 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F9840F46241CA53000BEEC14 /* Bridge.m */; };
+		F9840F49241CA63900BEEC14 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9840F48241CA63900BEEC14 /* Bridge.swift */; };
+		F9840F4C241CA64F00BEEC14 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9840F4B241CA64F00BEEC14 /* Peripheral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,11 @@
 		B5DB047E1F3A684600E91581 /* shell-app-manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "shell-app-manifest.json"; sourceTree = "<group>"; };
 		B5DB047F1F3A684600E91581 /* shell-app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shell-app.bundle"; sourceTree = "<group>"; };
 		C4A88D15726AD99E8A257BC7 /* libPods-coepi-mvp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coepi-mvp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9840F44241CA51300BEEC14 /* BLEDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEDiscovery.swift; sourceTree = "<group>"; };
+		F9840F46241CA53000BEEC14 /* Bridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
+		F9840F48241CA63900BEEC14 /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		F9840F4A241CA64300BEEC14 /* CoEpi-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoEpi-Bridging-Header.h"; sourceTree = "<group>"; };
+		F9840F4B241CA64F00BEEC14 /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +82,11 @@
 		B56386381DB9693800A0598C = {
 			isa = PBXGroup;
 			children = (
+				F9840F4B241CA64F00BEEC14 /* Peripheral.swift */,
+				F9840F4A241CA64300BEEC14 /* CoEpi-Bridging-Header.h */,
+				F9840F48241CA63900BEEC14 /* Bridge.swift */,
+				F9840F46241CA53000BEEC14 /* Bridge.m */,
+				F9840F44241CA51300BEEC14 /* BLEDiscovery.swift */,
 				B56386431DB9693800A0598C /* coepi-mvp */,
 				B56386421DB9693800A0598C /* Products */,
 				5B29BC350A332C58878A9F13 /* Pods */,
@@ -152,6 +166,7 @@
 					B56386401DB9693800A0598C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = C8D8QTF339;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,8 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9840F49241CA63900BEEC14 /* Bridge.swift in Sources */,
+				F9840F4C241CA64F00BEEC14 /* Peripheral.swift in Sources */,
+				F9840F47241CA53000BEEC14 /* Bridge.m in Sources */,
 				B56386611DB96A5E00A0598C /* main.m in Sources */,
 				B56386491DB9693800A0598C /* AppDelegate.m in Sources */,
+				F9840F45241CA51300BEEC14 /* BLEDiscovery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,11 +408,14 @@
 			baseConfigurationReference = 2C1548D9E4CB1AEFA5CCAE6D /* Pods-coepi-mvp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = C8D8QTF339;
 				INFOPLIST_FILE = "$(SRCROOT)/coepi-mvp/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coepi.org;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -403,11 +425,13 @@
 			baseConfigurationReference = A47FE4D7F70906B7DC8CE39B /* Pods-coepi-mvp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = C8D8QTF339;
 				INFOPLIST_FILE = "$(SRCROOT)/coepi-mvp/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coepi.org;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
